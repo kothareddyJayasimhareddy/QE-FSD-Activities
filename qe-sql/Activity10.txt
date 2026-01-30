@@ -1,0 +1,19 @@
+-- Activity 10
+
+-- 1Q
+select * from orders
+where SALESMAN_ID = (select salesman_id from CUSTOMERS where CUSTOMER_ID = 3007);
+
+-- 2Q
+select * from ORDERS
+where salesman_id in (select salesman_id from SALESMAN where salesman_city = 'New York');
+
+-- 3Q
+select count(*) from customers 
+where grade > (select avg(grade) from customers where city = 'New York');
+
+-- 4Q
+select * from orders
+where salesman_id in (select salesman_id from salesman 
+where commission = (select max(commission) from salesman)
+);

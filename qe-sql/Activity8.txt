@@ -1,0 +1,13 @@
+-- Activity8
+-- 1Q
+select customer_id, max(purchase_amount) from orders group by CUSTOMER_ID;
+
+-- 2Q
+select salesman_id, max(purchase_amount) 
+from orders where order_date = TO_DATE('2012-08-17', 'YYYY-MM-DD') 
+group by SALESMAN_ID;
+
+-- 3Q
+SELECT MAX(PURCHASE_AMOUNT), CUSTOMER_ID, ORDER_DATE 
+FROM ORDERS GROUP BY CUSTOMER_ID, ORDER_DATE 
+HAVING MAX(PURCHASE_AMOUNT) IN ( 2030, 3450, 5760, 6000 );
