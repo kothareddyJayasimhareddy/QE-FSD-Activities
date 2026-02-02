@@ -5,20 +5,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Activity1 {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         WebDriver driver = new FirefoxDriver();
         driver.get("https://training-support.net");
         System.out.println(driver.getTitle());
 
-    
-
         driver.findElement(By.linkText("About Us")).click();
-            Thread.sleep(2000);
 
         System.out.println(driver.getTitle());
 
         driver.quit();
     }
 }
+
 
 
