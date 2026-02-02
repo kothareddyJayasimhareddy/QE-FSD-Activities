@@ -12,7 +12,6 @@ with webdriver.Firefox() as driver:
 
     multi_select_element = driver.find_element(By.CSS_SELECTOR, ".h-80")
 
-    # Create Select object
     multi_select = Select(multi_select_element)
 
     # Select options
@@ -24,3 +23,4 @@ with webdriver.Firefox() as driver:
 
     # Deselect one option
     multi_select.deselect_by_index(5)
+
