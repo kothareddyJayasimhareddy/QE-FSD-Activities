@@ -11,7 +11,6 @@ with webdriver.Firefox() as driver:
 
     single_select_element = driver.find_element(By.TAG_NAME, "select")
 
-    # Create Select object
     single_select = Select(single_select_element)
 
     # Select second option using visible text
@@ -29,3 +28,4 @@ with webdriver.Firefox() as driver:
 
     for option in options:
         print(option.text)
+
